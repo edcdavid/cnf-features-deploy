@@ -18,7 +18,7 @@ DONT_REBUILD_TEST_BINS="${DONT_REBUILD_TEST_BINS:-false}"
 
 if ! which ginkgo; then
 	echo "Downloading ginkgo tool"
-	go install github.com/onsi/ginkgo/ginkgo
+	go install github.com/onsi/ginkgo/v2/ginkgo
 fi
 
 mkdir -p bin

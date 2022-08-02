@@ -28,7 +28,7 @@ RUN mkdir ~/bin && \
     eval "$(gimme $GOVERSION)" && \
     cat $GIMME_ENV >> $HOME/.bashrc && \
     # get required golang tools and OC client
-    go get github.com/onsi/ginkgo/ginkgo && \
+    go get github.com/onsi/ginkgo/v2/ginkgo && \
     go get github.com/onsi/gomega/... && \
     go get -u golang.org/x/lint/golint && \
     go install github.com/lack/mcmaker@v0.0.5 && \

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/onsi/ginkgo/config"
-	"github.com/onsi/ginkgo/types"
+	"github.com/onsi/ginkgo/v2/config"
+	"github.com/onsi/ginkgo/v2/types"
 
 	"github.com/kennygrant/sanitize"
 	v1 "k8s.io/api/core/v1"
@@ -72,7 +72,9 @@ func New(kubeconfig string, addToScheme AddToScheme, resourcesToLog FilterByName
 func (r *KubernetesReporter) SpecSuiteWillBegin(config config.GinkgoConfigType, summary *types.SuiteSummary) {
 
 }
+func (r *KubernetesReporter) SuiteWillBegin(config config.GinkgoConfigType, summary *types.SuiteSummary) {
 
+}
 // BeforeSuiteDidRun is the ginkgo callback on running of a suite.
 func (r *KubernetesReporter) BeforeSuiteDidRun(setupSummary *types.SetupSummary) {
 	r.Cleanup()
@@ -80,6 +82,8 @@ func (r *KubernetesReporter) BeforeSuiteDidRun(setupSummary *types.SetupSummary)
 
 // SpecWillRun is the ginkgo callback on running of a spec.
 func (r *KubernetesReporter) SpecWillRun(specSummary *types.SpecSummary) {
+}
+func (r *KubernetesReporter) SuiteDidEnd(suiteSummary *types.SuiteSummary) {
 }
 
 // SpecDidComplete is the ginkgo callback on finishing a spec.
