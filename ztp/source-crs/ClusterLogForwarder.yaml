@@ -9,6 +9,7 @@ spec:
   filters:
   - name: ran-du-labels
     openshiftLabels:
+    type: openshiftLabels
   outputs:
   - name: kafka-output
     kafka:

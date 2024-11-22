@@ -41,7 +41,6 @@ policies:
               url: tcp://10.46.55.190:9092/test
           filters:
           - name: ran-du-labels
-            type: openshiftLabels
             openshiftLabels:
               label1: test1
               label2: test2

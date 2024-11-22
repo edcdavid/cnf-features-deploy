@@ -143,8 +143,8 @@ required_cluster_logging_ClusterLogForwarder:
     - name: kafka-output
       kafka:
         url: tcp://$kafka-server:9092/endpoint
+      type: kafka
     pipelines:
-      - $pipelines
     serviceAccount:
       name: collector
 required_cluster_logging_ClusterLogSubscription:
