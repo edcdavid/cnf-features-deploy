@@ -9,12 +9,10 @@ spec:
   filters:
   - name: ran-du-labels
     openshiftLabels:
-      $openshiftlabels
-    type: openshiftLabels
   outputs:
-  - kafka:
+  - name: kafka-output
+    kafka:
       url: tcp://$kafka-server:9092/endpoint
-    name: kafka-output
     type: kafka
   pipelines:
   - filterRefs:

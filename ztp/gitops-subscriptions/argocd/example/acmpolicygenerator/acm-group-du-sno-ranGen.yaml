@@ -35,18 +35,20 @@ policies:
       patches:
       - spec:
           outputs:
-          - kafka:
+          - name: kafka-output
+            kafka:
               # below url is an example
               url: tcp://10.46.55.190:9092/test
           filters:
-          - type: openshiftLabels
+          - name: ran-du-labels
+            type: openshiftLabels
             openshiftLabels:
               label1: test1
               label2: test2
               label3: test3
               label4: test4
       openapi:
-        path: schema.openapi.clo
+        path: schema.openapi
     ## The setting below overrides the default "worker" selector predefined in
     ## the source-crs. The change is recommended on SNOs configured with PTP 
     ## event notification for forward compatibility with possible SNO expansion.
